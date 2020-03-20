@@ -1,5 +1,5 @@
 <template>
-  <div id="home">
+  <div>
     <h2>Home</h2>
     <div class="explainations">
       <p>
@@ -12,9 +12,14 @@
       </p>
       <p>
         Votre première mission, si vous l'acceptez, sera de me transmettre :
-        -les critères à suivre -la fréquence de partage autour de votre état de
-        santé -le format de mise à jour (chacun online, ou point visio...) d'ici
-        le ....
+        <ul>
+          <li>
+            -les critères à suivre -la fréquence de partage autour de votre état de santé    
+          </li>
+          <li>
+            -le format de mise à jour (chacun online, ou point visio...) d'ici le ....
+          </li>
+        </ul>
         <!-- TODO: evolve explainations -->
       </p>
       <p>
@@ -42,12 +47,6 @@ export default {
 </script>
 
 <style scoped>
-#home {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
 .explainations {
   margin: auto;
   width: 66%;
