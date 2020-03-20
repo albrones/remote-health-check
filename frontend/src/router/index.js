@@ -16,6 +16,7 @@ const routes = [
     name: "Step0",
     component: Step0
   }
+  //TODO: add steps
 ];
 
 const router = new VueRouter({

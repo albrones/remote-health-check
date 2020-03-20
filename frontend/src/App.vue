@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
+    <!-- <div id="nav"> TODO: Icon for home button or navigation 
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div> -->

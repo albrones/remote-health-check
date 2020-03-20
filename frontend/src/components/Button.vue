@@ -14,6 +14,7 @@ export default {
 </script>
 
 <style scoped>
+/* TODO: Design Button component */
 .button {
   width: 100px;
   /* font-size: 16px; */

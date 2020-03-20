@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <h2>Home</h2>
-    <div class="explanations">
+    <div class="explainations">
       <p>
         En cette période un peu spéciale, nous découvrons le télétravail à la
         maison, je vous propose de mettre en place un outil du style squad
@@ -15,8 +15,12 @@
         -les critères à suivre -la fréquence de partage autour de votre état de
         santé -le format de mise à jour (chacun online, ou point visio...) d'ici
         le ....
+        <!-- TODO: evolve explainations -->
       </p>
-      <p>Rules:</p>
+      <p>
+        Rules:
+        <!-- TODO: add customized Squad Health Check rules -->
+      </p>
     </div>
     <Button :action="start">Start</Button>
   </div>
@@ -44,7 +48,7 @@ export default {
   flex-direction: column;
   align-items: center;
 }
-.explanations {
+.explainations {
   margin: auto;
   width: 66%;
   text-align: center;

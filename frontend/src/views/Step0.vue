@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div>
     <h1>Step 0</h1>
     <h3>Enter your name please.</h3>
     <div>
@@ -19,10 +19,13 @@ export default {
   },
   methods: {
     next: function() {
+      //TODO : getName from input and save in store
       this.$router.push("/");
     }
   }
 };
 </script>
 
-<style></style>
+<style>
+/* TODO: Design input in component */
+</style>
