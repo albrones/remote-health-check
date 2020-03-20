@@ -1138,7 +1138,7 @@
 
 "@webassemblyjs/helper-module-context@1.8.5":
   version "1.8.5"
-  resolved "https://registry.npm.taobao.org/@webassemblyjs/helper-module-context/download/@webassemblyjs/helper-module-context-1.8.5.tgz?cache=0&sync_timestamp=1580599499825&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40webassemblyjs%2Fhelper-module-context%2Fdownload%2F%40webassemblyjs%2Fhelper-module-context-1.8.5.tgz#def4b9927b0101dc8cbbd8d1edb5b7b9c82eb245"
+  resolved "https://registry.npm.taobao.org/@webassemblyjs/helper-module-context/download/@webassemblyjs/helper-module-context-1.8.5.tgz#def4b9927b0101dc8cbbd8d1edb5b7b9c82eb245"
   integrity sha1-3vS5knsBAdyMu9jR7bW3ucguskU=
   dependencies:
     "@webassemblyjs/ast" "1.8.5"
@@ -5134,14 +5134,14 @@ mixin-deep@^1.2.0:
 
 mkdirp@0.5.1:
   version "0.5.1"
-  resolved "https://registry.npm.taobao.org/mkdirp/download/mkdirp-0.5.1.tgz?cache=0&sync_timestamp=1584463611406&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmkdirp%2Fdownload%2Fmkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
+  resolved "https://registry.npm.taobao.org/mkdirp/download/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   dependencies:
     minimist "0.0.8"
 
 mkdirp@^0.5.1, mkdirp@~0.5.1:
   version "0.5.3"
-  resolved "https://registry.npm.taobao.org/mkdirp/download/mkdirp-0.5.3.tgz?cache=0&sync_timestamp=1584463611406&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmkdirp%2Fdownload%2Fmkdirp-0.5.3.tgz#5a514b7179259287952881e94410ec5465659f8c"
+  resolved "https://registry.npm.taobao.org/mkdirp/download/mkdirp-0.5.3.tgz#5a514b7179259287952881e94410ec5465659f8c"
   integrity sha1-WlFLcXklkoeVKIHpRBDsVGVln4w=
   dependencies:
     minimist "^1.2.5"
@@ -5244,7 +5244,7 @@ neo-async@^2.5.0, neo-async@^2.6.0, neo-async@^2.6.1:
 
 nice-try@^1.0.4:
   version "1.0.5"
-  resolved "https://registry.npm.taobao.org/nice-try/download/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
+  resolved "https://registry.npm.taobao.org/nice-try/download/nice-try-1.0.5.tgz?cache=0&sync_timestamp=1584699814097&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fnice-try%2Fdownload%2Fnice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha1-ozeKdpbOfSI+iPybdkvX7xCJ42Y=
 
 no-case@^2.2.0:
@@ -6486,7 +6486,7 @@ regexpp@^2.0.1:
 
 regexpu-core@^4.7.0:
   version "4.7.0"
-  resolved "https://registry.npm.taobao.org/regexpu-core/download/regexpu-core-4.7.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fregexpu-core%2Fdownload%2Fregexpu-core-4.7.0.tgz#fcbf458c50431b0bb7b45d6967b8192d91f3d938"
+  resolved "https://registry.npm.taobao.org/regexpu-core/download/regexpu-core-4.7.0.tgz#fcbf458c50431b0bb7b45d6967b8192d91f3d938"
   integrity sha1-/L9FjFBDGwu3tF1pZ7gZLZHz2Tg=
   dependencies:
     regenerate "^1.4.0"
@@ -6557,7 +6557,7 @@ request-promise-native@^1.0.8:
 
 request@^2.87.0:
   version "2.88.2"
-  resolved "https://registry.npm.taobao.org/request/download/request-2.88.2.tgz?cache=0&sync_timestamp=1581439170162&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frequest%2Fdownload%2Frequest-2.88.2.tgz#d73c918731cb5a87da047e207234146f664d12b3"
+  resolved "https://registry.npm.taobao.org/request/download/request-2.88.2.tgz#d73c918731cb5a87da047e207234146f664d12b3"
   integrity sha1-1zyRhzHLWofaBH4gcjQUb2ZNErM=
   dependencies:
     aws-sign2 "~0.7.0"
@@ -7515,7 +7515,7 @@ toposort@^1.0.0:
 
 tough-cookie@^2.3.3, tough-cookie@~2.5.0:
   version "2.5.0"
-  resolved "https://registry.npm.taobao.org/tough-cookie/download/tough-cookie-2.5.0.tgz#cd9fb2a0aa1d5a12b473bd9fb96fa3dcff65ade2"
+  resolved "https://registry.npm.taobao.org/tough-cookie/download/tough-cookie-2.5.0.tgz?cache=0&sync_timestamp=1584647110516&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftough-cookie%2Fdownload%2Ftough-cookie-2.5.0.tgz#cd9fb2a0aa1d5a12b473bd9fb96fa3dcff65ade2"
   integrity sha1-zZ+yoKodWhK0c72fuW+j3P9lreI=
   dependencies:
     psl "^1.1.28"
