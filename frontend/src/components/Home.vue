@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="home">
     <h2>Home</h2>
     <div class="explanations">
       <p>
@@ -16,18 +16,36 @@
         santé -le format de mise à jour (chacun online, ou point visio...) d'ici
         le ....
       </p>
+      <p>Rules:</p>
     </div>
+    <button class="starter" @click="start">Start</button>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    start: function() {
+      alert("toto");
+    }
+  }
+};
 </script>
 
 <style scoped>
+#home {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 .explanations {
   margin: auto;
   width: 66%;
   text-align: center;
+}
+.starter {
+  width: 100px;
+  /* font-size: 16px; */
 }
 </style>
