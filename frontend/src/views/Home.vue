@@ -26,7 +26,7 @@
 export default {
   methods: {
     start: function() {
-      alert("toto");
+      this.$router.push("/step0");
     }
   }
 };
