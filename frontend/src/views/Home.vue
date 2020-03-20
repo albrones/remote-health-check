@@ -18,12 +18,17 @@
       </p>
       <p>Rules:</p>
     </div>
-    <button class="starter" @click="start">Start</button>
+    <Button :action="start">Start</Button>
   </div>
 </template>
 
 <script>
+import Button from "@/components/Button";
+
 export default {
+  components: {
+    Button
+  },
   methods: {
     start: function() {
       this.$router.push("/step0");
@@ -43,9 +48,5 @@ export default {
   margin: auto;
   width: 66%;
   text-align: center;
-}
-.starter {
-  width: 100px;
-  /* font-size: 16px; */
 }
 </style>
