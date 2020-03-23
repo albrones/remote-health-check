@@ -1,12 +1,19 @@
 <template>
     <div>
-        <h1>Step 0</h1>
-        <h3>Enter your name please.</h3>
-        <div>
-            <label for="name"></label>
-            <input id="name" type="text" />
+        <h2 class="title is-2">Step 0</h2>
+        <h3 class="subtitle is-5">Enter your name please.</h3>
+
+        <div class="field">
+            <div class="control">
+                <input
+                    class="input is-primary"
+                    type="text"
+                    placeholder="Name"
+                    v-model="name"
+                />
+            </div>
         </div>
-        <Button :action="next">Next</Button>
+        <Button :action="next" :isDisabled="hasntName">Next</Button>
     </div>
 </template>
 
@@ -17,10 +24,22 @@ export default {
     components: {
         Button,
     },
+    data: function() {
+        return {
+            name: '',
+            // hasName: true,
+        }
+    },
     methods: {
         next: function() {
             //TODO : getName from input and save in store
+            this.$store.commit('setUserName', this.name)
             this.$router.push('/')
+        },
+    },
+    computed: {
+        hasntName: function() {
+            return this.name === ''
         },
     },
 }

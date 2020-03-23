@@ -2,9 +2,11 @@
     <div id="app">
         <section class="section">
             <div class="container">
-                <router-link class="home-btn" to="/">
-                    <h1 class="title">Remote Heath Check</h1>
-                </router-link>
+                <h1 class="title is-1">
+                    <router-link class="home-btn" to="/">
+                        Remote Heath Check
+                    </router-link>
+                </h1>
                 <router-view />
             </div>
         </section>

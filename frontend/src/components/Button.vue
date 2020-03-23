@@ -1,5 +1,13 @@
 <template>
-    <button class="button" @click="action"><slot /></button>
+    <div class="buttons">
+        <button
+            class="button is-primary is-medium is-fullwidth"
+            @click="action"
+            :disabled="!enabled"
+        >
+            <slot />
+        </button>
+    </div>
 </template>
 
 <script>
@@ -9,14 +17,18 @@ export default {
             type: Function,
             required: true,
         },
+        isDisabled: {
+            type: Boolean,
+            required: false,
+            default: false,
+        },
+    },
+    computed: {
+        enabled: function() {
+            return !this.isDisabled
+        },
     },
 }
 </script>
 
-<style scoped>
-/* TODO: Design Button component */
-.button {
-    width: 100px;
-    /* font-size: 16px; */
-}
-</style>
+<style scoped></style>
