@@ -1,9 +1,13 @@
 <template>
     <div id="app">
-        <router-link class="home-btn" to="/">
-            <h1>Remote Heath Check</h1>
-        </router-link>
-        <router-view />
+        <section class="section">
+            <div class="container">
+                <router-link class="home-btn" to="/">
+                    <h1 class="title">Remote Heath Check</h1>
+                </router-link>
+                <router-view />
+            </div>
+        </section>
     </div>
 </template>
 
