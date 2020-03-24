@@ -24,7 +24,7 @@ export default {
         },
     },
     computed: {
-        enabled: function() {
+        enabled() {
             return !this.isDisabled
         },
     },

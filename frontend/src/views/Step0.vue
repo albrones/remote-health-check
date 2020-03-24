@@ -24,21 +24,19 @@ export default {
     components: {
         Button,
     },
-    data: function() {
+    data() {
         return {
             name: '',
-            // hasName: true,
         }
     },
     methods: {
-        next: function() {
-            //TODO : getName from input and save in store
+        next() {
             this.$store.commit('setUserName', this.name)
-            this.$router.push('/')
+            this.$router.push('/step1')
         },
     },
     computed: {
-        hasntName: function() {
+        hasntName() {
             return this.name === ''
         },
     },

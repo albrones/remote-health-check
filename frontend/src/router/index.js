@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Step0 from '../views/Step0.vue'
+import Step1 from '../views/Step1.vue'
 
 Vue.use(VueRouter)
 
@@ -16,7 +17,11 @@ const routes = [
         name: 'Step0',
         component: Step0,
     },
-    //TODO: add steps
+    {
+        path: '/step1',
+        name: 'Step1',
+        component: Step1,
+    },
 ]
 
 const router = new VueRouter({

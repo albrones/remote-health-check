@@ -39,7 +39,7 @@ export default {
     Button
   },
   methods: {
-    start: function() {
+    start() {
       this.$router.push("/step0");
     }
   }

@@ -15,4 +15,4 @@ export default new Vuex.Store({
     modules: {},
 })
 
-// TODO: Add stepState, userName, stepsValues
+// TODO: Add stepState, stepsValues
