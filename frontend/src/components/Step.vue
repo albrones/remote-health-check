@@ -9,9 +9,9 @@
 
         <div class="box">
             <div class="content">
-                <SentenceGood>{{ sentences.good }}</SentenceGood>
-                <SentenceMedium>{{ sentences.medium }}</SentenceMedium>
-                <SentenceBad>{{ sentences.bad }}</SentenceBad>
+                <Sentence type="good">{{ sentences.good }}</Sentence>
+                <Sentence type="medium">{{ sentences.medium }}</Sentence>
+                <Sentence type="bad">{{ sentences.bad }}</Sentence>
             </div>
         </div>
         <Button :action="next" :isDisabled="isChecked">Next</Button>
@@ -20,16 +20,12 @@
 
 <script>
 import Button from '@/components/Button'
-import SentenceBad from '@/components/SentenceBad'
-import SentenceGood from '@/components/SentenceGood'
-import SentenceMedium from '@/components/SentenceMedium'
+import Sentence from '@/components/Sentence'
 
 export default {
     components: {
         Button,
-        SentenceBad,
-        SentenceGood,
-        SentenceMedium,
+        Sentence,
     },
     props: {
         index: {

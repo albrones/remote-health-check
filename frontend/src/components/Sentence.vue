@@ -2,20 +2,20 @@
     <div class="level" @click="action">
         <div class="level-item sentence">
             <p>
-                <strong>-</strong>
+                <strong>{{ symbol }}</strong>
                 <br />
                 <slot />
             </p>
         </div>
 
         <div class="level-item">
-            <Dot color="red" />
+            <Dot :color="colorValue" />
             <!-- TODO: test with emojie instead -->
         </div>
 
         <div class="level-item">
             <figure class="image is-64x64">
-                <Arrow class="decrease" />
+                <Arrow :class="directionValue" />
             </figure>
         </div>
     </div>
@@ -30,6 +30,27 @@ export default {
         Dot,
         Arrow,
     },
+    props: {
+        type: {
+            type: String,
+            required: true,
+        },
+    },
+    computed: {
+        symbol() {
+            return type === 'good' ? '+' : type === 'bad' ? '-' : '='
+        },
+        colorValue() {
+            return type === 'good' ? 'green' : type === 'bad' ? 'red' : 'orange'
+        },
+        directionValue() {
+            return type === 'good'
+                ? 'increase'
+                : type === 'bad'
+                ? 'decrease'
+                : ''
+        },
+    },
     methods: {
         action() {
             alert('action')
@@ -39,6 +60,9 @@ export default {
 </script>
 
 <style>
+.increase {
+    transform: rotate(-45deg);
+}
 .decrease {
     transform: rotate(45deg);
 }
