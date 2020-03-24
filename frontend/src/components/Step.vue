@@ -9,78 +9,27 @@
 
         <div class="box">
             <div class="content">
-                <div class="level">
-                    <div class="level-item sentence">
-                        <p>
-                            <strong>-</strong>
-                            <br />
-                            {{ sentences.bad }}
-                        </p>
-                    </div>
-
-                    <div class="level-item">
-                        <Dot color="red" />
-                    </div>
-
-                    <div class="level-item">
-                        <figure class="image is-64x64">
-                            <Arrow class="increase" />
-                        </figure>
-                    </div>
-                </div>
-                <div class="level">
-                    <div class="level-item sentence">
-                        <p>
-                            <strong>=</strong>
-                            <br />
-                            {{ sentences.medium }}
-                        </p>
-                    </div>
-
-                    <div class="level-item">
-                        <Dot color="orange" />
-                    </div>
-                    <div class="level-item">
-                        <figure class="image is-64x64">
-                            <Arrow />
-                        </figure>
-                    </div>
-                </div>
-                <div class="level">
-                    <div class="level-item sentence">
-                        <p>
-                            <strong>+</strong>
-                            <br />
-                            {{ sentences.good }}
-                        </p>
-                    </div>
-
-                    <div class="level-item">
-                        <Dot color="green" />
-                    </div>
-                    <div class="level-item">
-                        <figure class="image is-64x64">
-                            <Arrow class="decrease" />
-                        </figure>
-                    </div>
-                </div>
+                <SentenceGood>{{ sentences.good }}</SentenceGood>
+                <SentenceMedium>{{ sentences.medium }}</SentenceMedium>
+                <SentenceBad>{{ sentences.bad }}</SentenceBad>
             </div>
         </div>
-
         <Button :action="next" :isDisabled="isChecked">Next</Button>
     </div>
 </template>
 
 <script>
 import Button from '@/components/Button'
-import Dot from '@/components/Dot'
-import Arrow from '@/components/Arrow'
+import SentenceBad from '@/components/SentenceBad'
+import SentenceGood from '@/components/SentenceGood'
+import SentenceMedium from '@/components/SentenceMedium'
 
 export default {
     components: {
         Button,
-        Dot,
-        Arrow,
+        SentenceBad,
+        SentenceGood,
+        SentenceMedium,
     },
     props: {
         index: {
@@ -113,22 +62,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.increase {
-    transform: rotate(-45deg);
-}
-.decrease {
-    transform: rotate(45deg);
-}
-.centered {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.sentence {
-    width: 15%;
-}
-/* .border {
-    border: 2px solid #f5f5f5;
-} */
-</style>
+<style scoped></style>
