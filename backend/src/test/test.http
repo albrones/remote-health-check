@@ -2,7 +2,7 @@ POST http://localhost:8080/graphql
 Content-Type: application/json
 
 {
-  "query": "{myAwesomeQuery {value}}"
+  "query": "{choicesByQuestion(questionId: 1) {state, evolution}}"
 }
 
 ###
