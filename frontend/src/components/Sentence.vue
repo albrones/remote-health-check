@@ -1,5 +1,5 @@
 <template>
-    <div class="level" @click="action">
+    <div class="level">
         <div class="level-item sentence">
             <p>
                 <strong>{{ symbol }}</strong>
@@ -8,12 +8,20 @@
             </p>
         </div>
 
-        <div class="level-item">
+        <div
+            class=" level-tiem "
+            :class="{ selected: activeDot }"
+            @click="action1"
+        >
             <Dot :color="colorValue" />
             <!-- TODO: test with emojie instead -->
         </div>
 
-        <div class="level-item">
+        <div
+            class="level-tiem"
+            :class="{ selected: activeArrow }"
+            @click="action2"
+        >
             <figure class="image is-64x64">
                 <Arrow :class="directionValue" />
             </figure>
@@ -36,24 +44,37 @@ export default {
             required: true,
         },
     },
+    data() {
+        return {
+            activeDot: false,
+            activeArrow: false,
+        }
+    },
     computed: {
         symbol() {
-            return type === 'good' ? '+' : type === 'bad' ? '-' : '='
+            return this.type === 'good' ? '+' : this.type === 'bad' ? '-' : '='
         },
         colorValue() {
-            return type === 'good' ? 'green' : type === 'bad' ? 'red' : 'orange'
+            return this.type === 'good'
+                ? 'green'
+                : this.type === 'bad'
+                ? 'red'
+                : 'orange'
         },
         directionValue() {
-            return type === 'good'
+            return this.type === 'good'
                 ? 'increase'
-                : type === 'bad'
+                : this.type === 'bad'
                 ? 'decrease'
                 : ''
         },
     },
     methods: {
-        action() {
-            alert('action')
+        action1() {
+            this.activeDot = !this.activeDot
+        },
+        action2() {
+            this.activeArrow = !this.activeArrow
         },
     },
 }
@@ -68,5 +89,11 @@ export default {
 }
 .sentence {
     width: 15%;
+}
+.selected {
+    border: #00d1b2 3px solid;
+}
+.separation {
+    border-left: whitesmoke 2px solid;
 }
 </style>

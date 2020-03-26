@@ -22,6 +22,9 @@ const routes = [
         name: 'Step1',
         component: Step1,
     },
+
+    // TODO: Add all steps dynamic
+    // TODO: Add stepX tuto. in step0 ?
 ]
 
 const router = new VueRouter({
