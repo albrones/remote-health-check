@@ -2,8 +2,16 @@ POST http://localhost:8080/graphql
 Content-Type: application/json
 
 {
-  "query": "{myAwesomeQuery {value}}"
+  "query": "{choicesByQuestion(questionId: 1) {state, evolution}}"
 }
 
 ###
 
+POST http://localhost:8080/graphql
+Content-Type: application/json
+
+{
+  "query": "mutation{saveChoice(questionId: 1, state: \"MEDIUM\", evolution: \"BETTER\"){id, questionId, state, evolution}}"
+}
+
+###
