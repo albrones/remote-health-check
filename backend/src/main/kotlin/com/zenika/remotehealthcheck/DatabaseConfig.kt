@@ -7,7 +7,6 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType
 import javax.sql.DataSource
 
-
 @Configuration
 @EnableJdbcRepositories
 class DatabaseConfig {

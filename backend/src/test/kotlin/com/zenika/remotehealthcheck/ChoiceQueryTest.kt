@@ -2,7 +2,7 @@ package com.zenika.remotehealthcheck
 
 import com.zenika.remotehealthcheck.Evolution.*
 import com.zenika.remotehealthcheck.State.*
-import org.assertj.core.api.Assertions
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -15,9 +15,9 @@ internal class ChoiceQueryTest(
         @Autowired val choiceQuery: ChoiceQuery
 ) {
 
-    private val choice1Question1 = Choice(null, 1, BAD, BETTER)
-    private val choice2Question1 = Choice(null, 1, MEDIUM, SAME)
-    private val choice1Question2 = Choice(null, 2, GOOD, WORSE)
+    private val choice1Question1 = Choice(questionId = 1, state = BAD, evolution = BETTER)
+    private val choice2Question1 = Choice(questionId = 1, state = MEDIUM, evolution = SAME)
+    private val choice1Question2 = Choice(questionId = 2, state = GOOD, evolution = WORSE)
 
     @BeforeEach
     internal fun `insert test data`() {
@@ -29,13 +29,13 @@ internal class ChoiceQueryTest(
 
     @Test
     internal fun `should return all choices`() {
-        Assertions.assertThat(choiceQuery.choices()).hasSize(3)
+        assertThat(choiceQuery.choices()).hasSize(3)
     }
 
     @Test
     internal fun `should return all choices corresponding to one question`() {
         val questionId = 1L
-        Assertions.assertThat(choiceQuery.choicesByQuestion(questionId))
+        assertThat(choiceQuery.choicesByQuestion(questionId))
                 .hasSize(2)
                 .allMatch { it.questionId == questionId }
     }
