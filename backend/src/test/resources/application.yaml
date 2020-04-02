@@ -5,6 +5,6 @@ spring:
   cloud:
     gcp:
       firestore:
-        project-id: remote-health-check
+        project-id: remote-health-check-test
         credentials:
-          location: classpath:serviceAccountKey.json
+          location: classpath:serviceAccountKeyTest.json

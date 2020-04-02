@@ -16,13 +16,13 @@ internal class ChoiceMutationTest(
 
     @AfterEach
     fun `clean database`() {
-        choiceRepository.deleteAll()
+        choiceRepository.deleteAll().block()
     }
 
     @Test
     internal fun `should save new choice`() {
-        choiceMutation.saveChoice(1, MEDIUM.name, BETTER.name)
-        val choices = choiceRepository.findAll()
+        choiceMutation.saveChoice(1, MEDIUM.name, BETTER.name).block()
+        val choices = choiceRepository.findAll().collectList().block() ?: emptyList()
         assertThat(choices).hasSize(1)
         assertThat(choices.toList()[0]).extracting(Choice::questionId).isEqualTo(1L)
         assertThat(choices.toList()[0]).extracting(Choice::state).isEqualTo(MEDIUM)

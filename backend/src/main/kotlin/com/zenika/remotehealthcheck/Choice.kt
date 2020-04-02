@@ -1,8 +1,11 @@
 package com.zenika.remotehealthcheck
 
-import org.springframework.data.annotation.Id
+import com.google.cloud.firestore.annotation.DocumentId
+import org.apache.commons.lang3.RandomStringUtils
+import org.springframework.cloud.gcp.data.firestore.Document
 
-data class Choice(@Id val id: Long? = null, val questionId: Long, val state: State, val evolution: Evolution)
+@Document(collectionName = "choices")
+data class Choice(@DocumentId val id: String? = RandomStringUtils.randomAlphanumeric(20), val questionId: Long, val state: State, val evolution: Evolution)
 
 enum class Evolution {
     WORSE, SAME, BETTER

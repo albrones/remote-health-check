@@ -1,13 +1,12 @@
 package com.zenika.remotehealthcheck
 
-import org.springframework.data.jdbc.repository.query.Query
-import org.springframework.data.repository.CrudRepository
+import org.springframework.cloud.gcp.data.firestore.FirestoreReactiveRepository
 import org.springframework.data.repository.query.Param
 import org.springframework.stereotype.Repository
+import reactor.core.publisher.Flux
 
 @Repository
-interface ChoiceRepository : CrudRepository<Choice, Long> {
+interface ChoiceRepository : FirestoreReactiveRepository<Choice> {
 
-    @Query("select * from choice c where c.question_id = :questionId")
-    fun findByQuestionId(@Param("questionId") id: Long): List<Choice>
+    fun findByQuestionId(@Param("questionId") id: Long): Flux<Choice>
 }
