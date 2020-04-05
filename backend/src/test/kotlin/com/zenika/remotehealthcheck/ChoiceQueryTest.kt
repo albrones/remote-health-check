@@ -2,6 +2,7 @@ package com.zenika.remotehealthcheck
 
 import com.zenika.remotehealthcheck.Evolution.*
 import com.zenika.remotehealthcheck.State.*
+import kotlinx.coroutines.runBlocking
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
@@ -21,8 +22,7 @@ internal class ChoiceQueryTest(
 
     @BeforeEach
     internal fun `insert test data`() {
-        choiceRepository.saveAll(listOf(choice1Question1, choice1Question2, choice2Question1))
-                .blockLast()
+        choiceRepository.saveAll(listOf(choice1Question1, choice1Question2, choice2Question1)).blockLast()
     }
 
     @AfterEach
@@ -32,13 +32,13 @@ internal class ChoiceQueryTest(
 
     @Test
     internal fun `should return all choices`() {
-        assertThat(choiceQuery.choices().collectList().block()).hasSize(3)
+        assertThat(runBlocking { choiceQuery.choices() }).hasSize(3)
     }
 
     @Test
     internal fun `should return all choices corresponding to one question`() {
         val questionId = 1L
-        assertThat(choiceQuery.choicesByQuestion(questionId).collectList().block())
+        assertThat(runBlocking { choiceQuery.choicesByQuestion(questionId) })
                 .hasSize(2)
                 .allMatch { it.questionId == questionId }
     }

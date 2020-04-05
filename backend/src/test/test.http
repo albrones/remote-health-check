@@ -2,6 +2,15 @@ POST http://localhost:8080/graphql
 Content-Type: application/json
 
 {
+  "query": "{choices{id, questionId, state, evolution}}"
+}
+
+###
+
+POST http://localhost:8080/graphql
+Content-Type: application/json
+
+{
   "query": "{choicesByQuestion(questionId: 1) {state, evolution}}"
 }
 

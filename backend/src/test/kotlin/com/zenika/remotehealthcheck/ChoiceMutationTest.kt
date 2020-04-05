@@ -2,6 +2,7 @@ package com.zenika.remotehealthcheck
 
 import com.zenika.remotehealthcheck.Evolution.BETTER
 import com.zenika.remotehealthcheck.State.MEDIUM
+import kotlinx.coroutines.runBlocking
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Test
@@ -21,7 +22,7 @@ internal class ChoiceMutationTest(
 
     @Test
     internal fun `should save new choice`() {
-        choiceMutation.saveChoice(1, MEDIUM.name, BETTER.name).block()
+        runBlocking { choiceMutation.saveChoice(1, MEDIUM.name, BETTER.name) }
         val choices = choiceRepository.findAll().collectList().block() ?: emptyList()
         assertThat(choices).hasSize(1)
         assertThat(choices.toList()[0]).extracting(Choice::questionId).isEqualTo(1L)

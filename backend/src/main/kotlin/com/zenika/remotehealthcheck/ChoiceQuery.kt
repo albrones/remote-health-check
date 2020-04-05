@@ -1,15 +1,14 @@
 package com.zenika.remotehealthcheck
 
 import com.expediagroup.graphql.spring.operations.Query
+import kotlinx.coroutines.flow.toList
+import kotlinx.coroutines.reactive.asFlow
 import org.springframework.stereotype.Component
-import reactor.core.publisher.Flux
 
 @Component
 class ChoiceQuery(val choiceRepository: ChoiceRepository) : Query {
 
-    //TODO fix Flux et graphql
-    fun choicesByQuestion(questionId: Long): Flux<Choice> = choiceRepository.findByQuestionId(questionId)
+    suspend fun choicesByQuestion(questionId: Long): List<Choice> = choiceRepository.findByQuestionId(questionId).asFlow().toList()
 
-    //TODO fix Flux et graphql
-    fun choices(): Flux<Choice> = choiceRepository.findAll()
+    suspend fun choices(): List<Choice> = choiceRepository.findAll().asFlow().toList()
 }
