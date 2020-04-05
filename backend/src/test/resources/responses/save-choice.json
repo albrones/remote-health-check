@@ -1,0 +1,10 @@
+{
+  "data": {
+    "saveChoice": {
+      "id": "{id}",
+      "questionId": 1,
+      "state": "MEDIUM",
+      "evolution": "BETTER"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "data": {
+    "choicesByQuestion": [
+      {
+        "state": "BAD",
+        "evolution": "BETTER"
+      },
+      {
+        "state": "MEDIUM",
+        "evolution": "SAME"
+      }
+    ]
+  }
+}

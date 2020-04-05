@@ -1,0 +1,3 @@
+{
+  "query": "mutation{saveChoice(questionId: 1, state: \"MEDIUM\", evolution: \"BETTER\"){id, questionId, state, evolution}}"
+}

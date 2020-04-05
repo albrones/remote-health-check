@@ -1,0 +1,24 @@
+{
+  "data": {
+    "choices": [
+      {
+        "id": "6n6xItWt44wjeEM2p75O",
+        "questionId": 1,
+        "state": "BAD",
+        "evolution": "BETTER"
+      },
+      {
+        "id": "PBASjsCwBmLRibQBGQel",
+        "questionId": 1,
+        "state": "MEDIUM",
+        "evolution": "SAME"
+      },
+      {
+        "id": "Tr4C1OZROB6VmMd5buXt",
+        "questionId": 2,
+        "state": "GOOD",
+        "evolution": "WORSE"
+      }
+    ]
+  }
+}

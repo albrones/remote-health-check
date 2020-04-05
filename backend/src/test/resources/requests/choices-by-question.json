@@ -1,0 +1,3 @@
+{
+  "query": "{choicesByQuestion(questionId: 1) {state, evolution}}"
+}
